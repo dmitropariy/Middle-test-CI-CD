@@ -11,3 +11,11 @@ def count_words_and_sentences(file_path):
     sentence_count = len(sentences)
 
     return word_count, sentence_count
+
+def main():
+    path = input('Введіть шлях до файлу: ')
+    word_count, sentence_count = count_words_and_sentences(path)
+    print('Кількість слів:', word_count, 'Кількість речень:', sentence_count)
+
+if __name__ == '__main__':
+    main()
