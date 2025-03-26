@@ -4,7 +4,7 @@ def count_words_and_sentences(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
 
-    words = re.findall(r'\b\w+\b', text)
+    words = re.findall(r'\b\w+(?:\'\w+)?\b', text)
     word_count = len(words)
 
     sentences = re.findall(r'[^.!?]+[.!?]+(?:\.\.\.)?', text)
