@@ -2,6 +2,7 @@ from src.main import count_words_and_sentences
 import pytest
 import os
 
+
 @pytest.fixture
 def temp_text_file(request, text_content):
     def _create_file(text_content):
@@ -16,6 +17,7 @@ def temp_text_file(request, text_content):
         return file_path
     return _create_file
 
+
 @pytest.mark.parametrize(
     "text_content, expected_word_count, expected_sentence_count",
     [
@@ -26,7 +28,10 @@ def temp_text_file(request, text_content):
         ("Wait... What?", 2, 2),
     ]
 )
-def test_count_words_and_sentences(temp_text_file, text_content, expected_word_count, expected_sentence_count):
+def test_count_words_and_sentences(temp_text_file,
+                                   text_content,
+                                   expected_word_count,
+                                   expected_sentence_count):
 
     file_path = temp_text_file(text_content)
 
