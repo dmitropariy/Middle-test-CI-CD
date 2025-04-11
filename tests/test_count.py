@@ -9,6 +9,7 @@ def temp_text_file(request, text_content):
         file_path = 'D:\\Навчання\\CICD\\Middle test\\test_file.txt'
         with open(file_path, 'w', encoding='utf-8') as file:
             file.write(text_content)
+
         # Фіксуємо закриття файлу після тесту
         def cleanup():
             if os.path.exists(file_path):
