@@ -15,7 +15,7 @@ def count_words_and_sentences(file_path):
     return word_count, sentence_count
 
 
-#точка входу
+#точка входу в програму
 def main():
     path = input('Введіть шлях до файлу: ')
     word_count, sentence_count = count_words_and_sentences(path)
