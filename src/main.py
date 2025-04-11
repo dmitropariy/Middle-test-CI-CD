@@ -1,5 +1,7 @@
 import re
 
+
+#функція підрахунку слів та речень
 def count_words_and_sentences(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
@@ -12,6 +14,8 @@ def count_words_and_sentences(file_path):
 
     return word_count, sentence_count
 
+
+#точка входу
 def main():
     path = input('Введіть шлях до файлу: ')
     word_count, sentence_count = count_words_and_sentences(path)
